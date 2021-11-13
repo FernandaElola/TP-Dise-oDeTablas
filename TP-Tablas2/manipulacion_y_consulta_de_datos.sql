@@ -44,3 +44,4 @@ SELECT CONCAT(first_name, ' ', last_name) AS Actores_Llamados_Sam FROM actors WH
 
 SELECT title FROM movies WHERE YEAR(release_date) BETWEEN 2004 AND 2008; 
 
+
