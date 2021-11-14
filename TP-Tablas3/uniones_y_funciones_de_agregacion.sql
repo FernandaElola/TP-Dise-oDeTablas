@@ -31,7 +31,7 @@ FROM series;
 
 -- Micro desafío Paso 5
 
-SELECT first_name, last_name
+SELECT first_name AS Nombre, last_name AS Apellido
 FROM actors
 WHERE LENGTH(first_name) > 6
 ORDER BY first_name;
@@ -39,12 +39,12 @@ ORDER BY first_name;
 SELECT COUNT(id) AS 'Cantidad de episodios'
 FROM episodes;
 
-SELECT series.title, COUNT(seasons.id) AS seasons
+SELECT series.title AS Titulo, COUNT(seasons.id) AS Temporadas
 FROM series
 INNER JOIN seasons ON serie_id = series.id
 GROUP BY series.title;
 
-SELECT genres.name, COUNT(movies.id) AS movies
+SELECT genres.name AS 'Genero', COUNT(movies.id) AS Peliculas
 FROM genres
 INNER JOIN movies ON genre_id = genres.id
 GROUP BY genres.name
